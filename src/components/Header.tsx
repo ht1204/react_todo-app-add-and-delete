@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 type Props = {
   allComplete: boolean;
   newTodoRef: React.RefObject<HTMLInputElement>;
@@ -19,7 +21,9 @@ export const Header: React.FC<Props> = ({
     {/* this button should have `active` class only if all todos are completed */}
     <button
       type="button"
-      className={`todoapp__toggle-all ${allComplete ? 'active' : ''}`}
+      className={classNames('todoapp__toggle-all', {
+        active: allComplete,
+      })}
       data-cy="ToggleAllButton"
     />
 

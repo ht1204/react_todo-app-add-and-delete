@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Todo } from '../types/Todo';
 
 type Props = {
@@ -17,7 +18,12 @@ export const TodoItem: React.FC<Props> = ({
   const showLoader = isTemp || isDeleting;
 
   return (
-    <div data-cy="Todo" className={todo.completed ? 'todo completed' : 'todo'}>
+    <div
+      data-cy="Todo"
+      className={classNames('todo', {
+        completed: todo.completed,
+      })}
+    >
       <div className="todo__status-label">
         <input
           data-cy="TodoStatus"
@@ -34,7 +40,9 @@ export const TodoItem: React.FC<Props> = ({
 
       <div
         data-cy="TodoLoader"
-        className={`todo__loader ${showLoader ? 'is-active' : ''}`}
+        className={classNames('todo__loader', {
+          'is-active': showLoader,
+        })}
       ></div>
 
       {/* Remove button appears only on hover */}

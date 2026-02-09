@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { UserWarning } from './UserWarning';
 import { getTodos, USER_ID } from './api/todos';
 import { Todo } from './types/Todo';
-import { FilterType } from './types/FilterType';
+import { FilterType, FILTERS } from './types/FilterType';
 import { ErrorMessage } from './types/ErrorMessage';
 import { Header } from './components/Header';
 import { TodoList } from './components/TodoList';
@@ -21,7 +21,7 @@ export const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<ErrorMessage | null>(null);
-  const [filter, setFilter] = useState<FilterType>('all');
+  const [filter, setFilter] = useState<FilterType>(FILTERS.all);
 
   const [newTitle, setNewTitle] = useState('');
   const [tempTodo, setTempTodo] = useState<Todo | null>(null);
@@ -163,15 +163,19 @@ export const App: React.FC = () => {
           isAdding={isAdding}
         />
 
-        <TodoList
-          todos={visibleTodos}
-          isLoading={isLoading}
-          deleteIds={deleteIds}
-          onDelete={handleDeleteTodo}
-          tempTodo={tempTodo}
-        />
+        {isLoading && <div data-cy="TodoLoader" className="loader"></div>}
 
-        {todos.length > 0 && (
+        {!isLoading && (todos.length > 0 || tempTodo) && (
+          <TodoList
+            todos={visibleTodos}
+            isLoading={isLoading}
+            deleteIds={deleteIds}
+            onDelete={handleDeleteTodo}
+            tempTodo={tempTodo}
+          />
+        )}
+
+        {!isLoading && todos.length > 0 && (
           <Footer
             activeCount={activeCount}
             filter={filter}

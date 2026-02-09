@@ -1,4 +1,5 @@
-import { FilterType } from '../types/FilterType';
+import classNames from 'classnames';
+import { FilterType, FILTERS } from '../types/FilterType';
 
 type Props = {
   activeCount: number;
@@ -25,10 +26,12 @@ export const Footer: React.FC<Props> = ({
       <a
         href="#/"
         data-cy="FilterLinkAll"
-        className={`filter__link ${filter === 'all' ? 'selected' : ''}`}
+        className={classNames('filter__link', {
+          selected: filter === FILTERS.all,
+        })}
         onClick={e => {
           e.preventDefault();
-          setFilter('all');
+          setFilter(FILTERS.all);
         }}
       >
         All
@@ -37,10 +40,12 @@ export const Footer: React.FC<Props> = ({
       <a
         href="#/active"
         data-cy="FilterLinkActive"
-        className={`filter__link ${filter === 'active' ? 'selected' : ''}`}
+        className={classNames('filter__link', {
+          selected: filter === FILTERS.active,
+        })}
         onClick={e => {
           e.preventDefault();
-          setFilter('active');
+          setFilter(FILTERS.active);
         }}
       >
         Active
@@ -49,10 +54,12 @@ export const Footer: React.FC<Props> = ({
       <a
         href="#/completed"
         data-cy="FilterLinkCompleted"
-        className={`filter__link ${filter === 'completed' ? 'selected' : ''}`}
+        className={classNames('filter__link', {
+          selected: filter === FILTERS.completed,
+        })}
         onClick={e => {
           e.preventDefault();
-          setFilter('completed');
+          setFilter(FILTERS.completed);
         }}
       >
         Completed
