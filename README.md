@@ -1,8 +1,6 @@
 # React Todo App Add and Delete
 
-## 🚀 [Live Demo](https://YOUR_GITHUB_USERNAME.github.io/react_todo-app-add-and-delete/)
-
-> **Note**: Replace `YOUR_GITHUB_USERNAME` in the link above with your actual GitHub username
+## 🚀 [Live Demo](https://ht1204.github.io/react_todo-app-add-and-delete/)
 
 ---
 
@@ -86,21 +84,20 @@ Remove all the completed todos after the `Clear completed` button click:
 ## 🚀 Deployment to GitHub Pages
 
 1. Make sure you have a GitHub repository created
-2. Replace `YOUR_GITHUB_USERNAME` in the demo link at the top of this README
-3. Commit your changes:
+2. Commit your changes:
    ```bash
    git add .
    git commit -m "feat: implement add and delete todos functionality"
    ```
-4. Push to your repository:
+3. Push to your repository:
    ```bash
    git push origin main
    ```
-5. Deploy to GitHub Pages:
+4. Deploy to GitHub Pages:
    ```bash
    npm run deploy
    ```
-6. Your app will be live at: `https://YOUR_GITHUB_USERNAME.github.io/react_todo-app-add-and-delete/`
+5. Your app will be live at: `https://ht1204.github.io/react_todo-app-add-and-delete/`
 
 ## 📝 Available Commands
 
