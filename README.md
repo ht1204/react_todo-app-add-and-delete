@@ -1,11 +1,38 @@
 # React Todo App Add and Delete
 
+## 🚀 [Live Demo](https://YOUR_GITHUB_USERNAME.github.io/react_todo-app-add-and-delete/)
+
+> **Note**: Replace `YOUR_GITHUB_USERNAME` in the link above with your actual GitHub username
+
+---
+
 It is the second part of the React Todo App with API.
 
 Take your code implemented for [Loading todos](https://github.com/mate-academy/react_todo-app-loading-todos)
 and implement the ability to add and remove todos.
 
 > Here is [the working example](https://mate-academy.github.io/react_todo-app-with-api/)
+
+## ✅ Features Implemented
+
+- ✅ Add new todos with validation
+- ✅ Delete individual todos
+- ✅ Clear all completed todos
+- ✅ Filter todos (all/active/completed)
+- ✅ Error notifications
+- ✅ Loading states
+- ✅ Smooth animations
+
+## 🛠️ Tech Stack
+
+- React 18 with TypeScript
+- Vite
+- Bulma CSS
+- React Transition Group
+- Cypress for testing
+
+---
+
 # ❗️❗️❗️</br>Please implement only adding and deleting todos in addition to what was already implemented.<br><br>All the other features from the working version will be implemented in the next task.</br>❗️❗️❗️
 
 > Check the [API Documentation](https://mate-academy.github.io/fe-students-api/)
@@ -55,7 +82,35 @@ Remove all the completed todos after the `Clear completed` button click:
 - Install Prettier Extention and use this [VSCode settings](https://mate-academy.github.io/fe-program/tools/vscode/settings.json) to enable format on save.
 - Implement a solution following the [React task guideline](https://github.com/mate-academy/react_task-guideline#react-tasks-guideline).
 - Use the [React TypeScript cheat sheet](https://mate-academy.github.io/fe-program/js/extra/react-typescript).
-- Replace `<your_account>` with your Github username in the [DEMO LINK](https://<your_account>.github.io/react_todo-app-add-and-delete/) and add it to the PR description.
+
+## 🚀 Deployment to GitHub Pages
+
+1. Make sure you have a GitHub repository created
+2. Replace `YOUR_GITHUB_USERNAME` in the demo link at the top of this README
+3. Commit your changes:
+   ```bash
+   git add .
+   git commit -m "feat: implement add and delete todos functionality"
+   ```
+4. Push to your repository:
+   ```bash
+   git push origin main
+   ```
+5. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
+6. Your app will be live at: `https://YOUR_GITHUB_USERNAME.github.io/react_todo-app-add-and-delete/`
+
+## 📝 Available Commands
+
+```bash
+npm start          # Start development server
+npm run build      # Build for production
+npm test           # Run Cypress tests
+npm run deploy     # Deploy to GitHub Pages
+npm run lint       # Run all linters
+```
 
 ## IF you want to implement smooth animations
 
